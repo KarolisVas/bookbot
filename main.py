@@ -15,7 +15,7 @@ def get_book_text(file_path):
 if __name__ == '__main__':
 
     if len(sys.argv) != 2:
-        print("Usage: python main.py <path_to_book>")
+        print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
 
     text = get_book_text(sys.argv[1])
