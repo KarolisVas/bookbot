@@ -1,4 +1,5 @@
 from stats import count_words
+from stats import count_characters
 
 def get_book_text(file_path):
     try:
@@ -9,6 +10,7 @@ def get_book_text(file_path):
         print("frankenstein book not found")
 
 if __name__ == '__main__':
-    book_path = "books/frankenstein.txt"
-    count_of_words = count_words(get_book_text(book_path))
+    text = get_book_text("books/frankenstein.txt")
+    count_of_words = count_words(text)
     print(f"Found {len(count_of_words)} total words")
+    print(count_characters(text))
