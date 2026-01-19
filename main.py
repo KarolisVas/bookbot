@@ -1,3 +1,5 @@
+from stats import count_words
+
 def get_book_text(file_path):
     try:
         with open(file_path) as f:
@@ -5,9 +7,6 @@ def get_book_text(file_path):
         return book_text
     except FileNotFoundError:
         print("frankenstein book not found")
-
-def count_words(text):
-    return text.split()
 
 if __name__ == '__main__':
     book_path = "books/frankenstein.txt"
